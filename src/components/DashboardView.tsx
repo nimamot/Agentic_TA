@@ -35,7 +35,7 @@ export const INITIAL_STAGES: Stage[] = [
     model: "GPT-4o",
     temperature: 0.2,
     tools: ["Text Splitter", "Keyword Extractor"],
-    inputs: ["Raw Transcripts", "Field Notes"],
+    inputs: ["Raw Transcripts", "Field Notes", "Research Question"],
     outputs: ["Initial Codes", "Memo Drafts"]
   },
   {
@@ -85,6 +85,21 @@ export const INITIAL_STAGES: Stage[] = [
   },
   {
     id: 5,
+    name: 'Validation & Reporting',
+    agentName: 'Reviewer Agent',
+    description: 'Validates the theory against raw data and generates the final report.',
+    icon: PenTool,
+    status: 'idle',
+    logs: [],
+    output: null,
+    model: "GPT-4o-mini",
+    temperature: 0.1,
+    tools: ["Citation Checker", "Report Formatter"],
+    inputs: ["Theoretical Framework", "Raw Data"],
+    outputs: ["Final Report", "Validation Score"]
+  }, 
+    {
+    id: 6,
     name: 'Validation & Reporting',
     agentName: 'Reviewer Agent',
     description: 'Validates the theory against raw data and generates the final report.',
