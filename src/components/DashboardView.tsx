@@ -40,7 +40,7 @@ export const INITIAL_STAGES: Stage[] = [
   },
   {
     id: 2,
-    name: 'Axial Coding',
+    name: 'Axial Coding [2]',
     agentName: 'Synthesizer Agent',
     description: 'Relates categories to subcategories, testing relationships against data.',
     icon: Layers,
